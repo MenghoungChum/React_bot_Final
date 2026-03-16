@@ -43,7 +43,7 @@ const testimonials = [
 
 const FeedBack = () => {
   return (
-    <section className="bg-gray-100 py-20 px-6">
+    <section className=" py-20 px-6">
 
       <div className="text-center mb-14">
         <h2 className="text-4xl font-bold text-gray-900">
@@ -71,15 +71,15 @@ const FeedBack = () => {
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
 
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 h-full">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 h-full dark:bg-gray-800">
 
                 <div className="flex mb-4">
                   {[...Array(item.rating)].map((_, i) => (
-                    <span key={i} className="text-gray-700 text-lg">★</span>
+                    <span key={i} className="text-gray-700 text-lg dark:text-white">★</span>
                   ))}
                 </div>
 
-                <p className="text-gray-600 mb-8">
+                <p className="text-gray-600 mb-8 dark:text-white">
                   "{item.text}"
                 </p>
 
@@ -91,10 +91,10 @@ const FeedBack = () => {
                   />
 
                   <div>
-                    <h4 className="font-semibold text-gray-900">
+                    <h4 className="font-semibold text-gray-900 dark:text-white">
                       {item.name}
                     </h4>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 dark:text-white">
                       {item.role}
                     </p>
                   </div>

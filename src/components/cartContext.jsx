@@ -7,9 +7,7 @@ export const CartContextProvider = ({ children }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") || "light"
   );
-
   useEffect(() => {
-
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {

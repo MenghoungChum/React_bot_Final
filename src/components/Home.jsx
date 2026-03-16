@@ -3,12 +3,12 @@ import banner from '../assets/banner.jpg'
 
 const Home = () => {
   return (
-    <section className="bg-gray-100 py-20 px-6 mt-10">
+    <section className="py-20 px-6 mt-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left Content */}
         <div>
-          <h1 className="text-5xl md:text-6xl font-serif font-semibold text-gray-900 leading-tight">
+          <h1 className="text-5xl dark:text-white md:text-6xl font-serif font-semibold text-gray-900 leading-tight">
             Timeless <br />
             Elegance Meets <br />
             Modern Style

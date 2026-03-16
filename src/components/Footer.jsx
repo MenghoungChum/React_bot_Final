@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 py-12 px-6">
+    <footer className=" text-gray-700 py-12 px-6">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
     {/* Logo + Description + Social */}
     <div className="md:col-span-2">
@@ -16,7 +16,7 @@ const Footer = () => {
         
       
       </div>
-      <p className="text-gray-600 mb-6 max-w-sm">
+      <p className="text-gray-600 mb-6 max-w-sm dark:text-white">
         Your ultimate destination for premium clothing, accessories, and the
         latest styles. Level up your wardrobe with us.
       </p>
@@ -39,7 +39,7 @@ const Footer = () => {
     {/* Shop Links */}
     <div>
       <h3 className="text-gray-900 font-semibold mb-4">Shop</h3>
-      <ul className="space-y-2 text-gray-600">
+      <ul className="space-y-2 text-gray-600 dark:text-white">
         <li>
           <a href="#" className="hover:text-gray-900">
             New Arrivals
@@ -71,7 +71,7 @@ const Footer = () => {
     {/* Support Links */}
     <div>
       <h3 className="text-gray-900 font-semibold mb-4">Support</h3>
-      <ul className="space-y-2 text-gray-600">
+      <ul className="space-y-2 text-gray-600 dark:text-white">
         <li>
           <a href="#" className="hover:text-gray-900">
             Help Center
@@ -103,7 +103,7 @@ const Footer = () => {
     {/* Company Links */}
     <div>
       <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
-      <ul className="space-y-2 text-gray-600">
+      <ul className="space-y-2 text-gray-600 dark:text-white">
         <li>
           <a href="#" className="hover:text-gray-900">
             About Us

@@ -5,7 +5,7 @@ import AppRoute from './components/AppRoute'
 const App = () => {
   return (
     <div>
-      <AppRoute/>
+      {/* <AppRoute/> */}
       <HomePage/>
     </div>
   )

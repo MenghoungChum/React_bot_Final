@@ -2,34 +2,33 @@ import { Heart, ShoppingBag, Star } from 'lucide-react';
 import products from './storeData';
 const Popular = () => {
   return (
-    <section className="py-16 px-6 bg-gray-100">
-        <h2 className='text-4xl font-bold text-center my-10'>Popular product</h2>
+    <section className="py-16 px-6">
+      <h2 className='text-4xl font-bold text-center my-10 dark:text-white'>Popular product</h2>
       <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {products.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition"
+            className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition dark:bg-gray-800 text-white"
           >
-            
             {/* Image */}
             <div className={`h-56 ${item.color} relative`}>
                 <img src={item.image}  className="w-full h-full object-cover" alt="" />
               <button className="absolute top-4 right-4 bg-white p-2 rounded-full shadow">
-                <Heart className='cursor-pointer' size={18} />
+                <Heart className='cursor-pointer dark:text-black text-black' size={18} />
               </button>
             </div>
 
             {/* Content */}
             <div className="p-6">
-              <p className="text-sm text-gray-500 tracking-wide">
+              <p className="text-sm text-gray-500 tracking-wide dark:text-white">
                 {item.category}
               </p>
 
-              <h3 className="font-semibold text-lg mt-1">
+              <h3 className="font-semibold text-lg mt-1 text-gray-500 dark:text-white">
                 {item.name}
               </h3>
 
-              <div className="flex justify-between items-center mt-4">
+              <div className="flex justify-between items-center mt-4 text-gray-500 dark:text-white">
                 <span className="text-2xl font-bold">
                   ${item.price}
                 </span>
@@ -40,7 +39,7 @@ const Popular = () => {
                 </div>
               </div>
 
-              <button className="mt-6 w-full bg-black text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 transition">
+              <button className="mt-6 w-full bg-black dark:bg-white dark:text-black text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-400 dark:hover:text-white transition">
                 <ShoppingBag size={18} />
                 Add to Cart
               </button>

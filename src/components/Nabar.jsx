@@ -22,7 +22,7 @@ const Nabar = () => {
     return (
         <div className="fixed top-0 left-0 w-full z-50">
             {/* Header */}
-            <header className="bg-white border-b border-gray-300 shadow-md">
+            <header className="bg-gray-100 dark:bg-black border-b border-gray-300 shadow-md">
                 <div className="max-w-7xl mx-auto  py-4 flex justify-between items-center">
                     {/* Logo & Title */}
                     <div className="flex items-center space-x-3">
@@ -39,7 +39,7 @@ const Nabar = () => {
                                     setIsActive(item.name);
                                     navigate(item.path);
                                 }}
-                                className={`text-md text-gray-700 hover:text-black cursor-pointer ${isActice === item.name ? "underline font-semibold" : ""
+                                className={`text-md dark:text-white text-gray-700 hover:text-black cursor-pointer ${isActice === item.name ? "underline font-semibold" : ""
                                     }`}
                             >
                                 {item.name}

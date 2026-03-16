@@ -10,7 +10,7 @@ import { Contact } from 'lucide-react'
 
 const HomePage = () => {
   return (
-    <div className='overflow-hidde bg-gray-100'>
+    <div className='overflow-hidde'>
         <Nabar/>
         <Home/>
         <Popular/>
