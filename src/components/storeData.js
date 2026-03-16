@@ -11,6 +11,7 @@ import clothe8 from '../assets/clothe8.jpg'
 
 const products = [
   {
+    id: 1,
     category: "T-Shirts",
     name: "Classic White Shirt",
     price: 129,
@@ -18,6 +19,7 @@ const products = [
     image: clothe1
   },
   {
+    id: 2,
     category: "Pants",
     name: "Premium Denim Jeans",
     price: 189,
@@ -25,6 +27,7 @@ const products = [
     image: clothe2
   },
   {
+    id: 3,
     category: "Jackets",
     name: "Elegant Blazer",
     price: 249,
@@ -32,6 +35,7 @@ const products = [
     image: clothe3
   },
   {
+    id: 4,
     category: "Dresses",
     name: "Minimalist Sweater",
     price: 149,
@@ -39,6 +43,7 @@ const products = [
     image: clothe4
   },
   {
+    id: 5,
     category: "T-Shirts",
     name: "Slim Fit T-Shirt",
     price: 79,
@@ -46,6 +51,7 @@ const products = [
     image: clothe5
   },
   {
+    id: 6,
     category: "Pants",
     name: "Casual Chino Pants",
     price: 139,
@@ -53,6 +59,7 @@ const products = [
     image: clothe6
   },
   {
+    id: 7,
     category: "Jackets",
     name: "Winter Coat",
     price: 299,
@@ -60,6 +67,7 @@ const products = [
     image: clothe7
   },
   {
+    id: 8,
     category: "Accessories",
     name: "Cotton Polo Shirt",
     price: 99,
@@ -67,7 +75,6 @@ const products = [
     image: clothe8
   },
 ];
-
 
 
 export default products

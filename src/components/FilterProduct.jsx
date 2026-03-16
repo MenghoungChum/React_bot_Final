@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import products from "./storeData";
 import { Heart, ShoppingBag, Star } from "lucide-react";
+import { CartContext } from "./cartContext";
 
 const FilterProduct = () => {
+
+  const { addToCart, toggleFavourite, favourites } = useContext(CartContext);
 
   const [price, setPrice] = useState(500);
   const [categories, setCategories] = useState([]);
@@ -126,12 +129,12 @@ const FilterProduct = () => {
             </select>
           </div>
 
-          {/* Grid */}
+          {/* Product Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {filteredProducts.map((item, index) => (
+            {filteredProducts.map((item) => (
               <div
-                key={index}
+                key={item.id}
                 className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition"
               >
                 <div className="h-56 relative overflow-hidden">
@@ -141,8 +144,19 @@ const FilterProduct = () => {
                     className="w-full h-full object-cover hover:scale-105 transition duration-300"
                   />
 
-                  <button className="absolute top-4 right-4 dark:text-black bg-white p-2 rounded-full shadow">
-                    <Heart size={18} />
+                  {/* Favourite */}
+                  <button
+                    onClick={() => toggleFavourite(item)}
+                    className="absolute top-4 right-4 bg-white p-2 rounded-full shadow dark:text-black"
+                  >
+                    <Heart
+                      size={18}
+                      className={
+                        favourites.find((fav) => fav.id === item.id)
+                          ? "text-red-500 fill-red-500"
+                          : ""
+                      }
+                    />
                   </button>
                 </div>
 
@@ -166,7 +180,11 @@ const FilterProduct = () => {
                     </div>
                   </div>
 
-                  <button className="mt-6 w-full bg-black text-white dark:bg-white dark:text-black py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-400 transition">
+                  {/* Add to Cart */}
+                  <button
+                    onClick={() => addToCart(item)}
+                    className="mt-6 w-full bg-black text-white dark:bg-white dark:text-black py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 dark:hover:bg-gray-400 transition"
+                  >
                     <ShoppingBag size={18} />
                     Add to Cart
                   </button>
